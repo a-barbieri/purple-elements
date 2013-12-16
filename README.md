@@ -3,16 +3,16 @@ purple-elements
 
 Sass mixin by Purple Network srl
 
-Features:
-text-shadow
-opacity
-retina image
-gradient
-background cover
-box shadow
-inner shadow
-drop shadow
-rounded corners
-box sizing
-transitions utils
+Features:<br />
+text-shadow<br />
+opacity<br />
+retina image<br />
+gradient<br />
+background cover<br />
+box shadow<br />
+inner shadow<br />
+drop shadow<br />
+rounded corners<br />
+box sizing<br />
+transitions utils<br />
 
