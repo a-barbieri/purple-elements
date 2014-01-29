@@ -6,15 +6,7 @@
 /***********************************************/
 
 
-/**
- *  mixin per trasformare i px in em
- *  utilizzo: regola: em(valore in px);
- *  es: font-size: em(16); => font-size: 16px; => font-size: 1em;
- */
-$browser-context: 16; // Default
-@function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em;
-}
+
 
 @mixin text-shadow($x:0px, $y:0px, $blur:0px, $color:#000) {
   text-shadow: $x $y $blur $color;
