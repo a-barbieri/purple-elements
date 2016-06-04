@@ -7,13 +7,24 @@
 
 
 /**
- *  mixin per trasformare i px in em
- *  utilizzo: regola: em(valore in px);
- *  es: font-size: em(16); => font-size: 16px; => font-size: 1em;
+ *  mixin per ottenere il font come specificato 
+ *  da illustrator in proporzione al browser context.
+ *  Regola: 
+ *  font-size( 10px ) # => font 10 e interlinea 10
+ *  font-size( 10px, 14px ) # => font 10 e interlinea 14
+ *  ovviamente questo in em
  */
 $browser-context: 16; // Default
-@function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em;
+@mixin font-size( $pixels, $lineheight: $pixels, $context: $browser-context ) {
+  font-size: #{$pixels/$context}em;
+  line-height: #{$lineheight/$pixels}em;
+}
+
+/*
+ * Utilizza il valore base del kerning di illustrator
+ */
+@function kerning( $kerning ) {
+  @return #{ $kerning / 1000 }em;
 }
 
 @mixin text-shadow($x:0px, $y:0px, $blur:0px, $color:#000) {
